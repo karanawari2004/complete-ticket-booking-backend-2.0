@@ -39,7 +39,7 @@ app.use(express.json());
 // Session stored in MongoDB
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET || "my-secret-key",,
     resave: false,
     saveUninitialized: false,
 
